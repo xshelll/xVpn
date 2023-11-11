@@ -25,6 +25,7 @@ schedule.every(15).minutes.do(main)
 
 if __name__ == "__main__":
     print("#=> Started")
+    print("test")
     main()
     while True:
         schedule.run_pending()
