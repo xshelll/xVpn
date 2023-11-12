@@ -14,7 +14,7 @@ def getConfigs():
 
 
 def runTest():
-    subprocess.call(['./xray-knife', 'net', 'http', '-f', 'config.txt'])
+    subprocess.call(['./xray-knife', 'net', 'http', '-f', 'config.txt', '-u', 'https://youtube.com', '-s'])
 
 
 def main():
