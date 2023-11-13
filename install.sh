@@ -34,7 +34,7 @@ cd xVpn
 pip install -r requirements.txt --break-system-packages
 
 # Change permissions
-chmod +x knife-xray
+chmod +x xray-knife
 
 # Run the web.py script in a detached screen session
 screen -dmS web_session python3 web.py
