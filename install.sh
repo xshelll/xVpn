@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# ANSI color codes
+BLUE='\033[0;34m'
+NC='\033[0m'  # No Color
+
 # Make sure the script is running as root
 if [ "$(id -u)" != "0" ]; then
-    echo "This script must be run as root."
+    echo -e "${BLUE}This script must be run as root.${NC}"
     exit 1
 fi
 
@@ -20,11 +24,11 @@ apt install -y python3-pip
 pip --version
 
 # Display a message indicating successful installation
-echo "pip for Python 3 has been successfully installed."
+echo -e "${BLUE}pip for Python 3 has been successfully installed.${NC}"
 
 # Check if xVpn directory exists and delete it
 if [ -d "xVpn" ]; then
-    echo "Deleting existing xVpn directory..."
+    echo -e "${BLUE}Deleting existing xVpn directory...${NC}"
     rm -rf xVpn
 fi
 
@@ -43,11 +47,11 @@ chmod +x xray-knife
 # Run the web.py script in a detached screen session
 screen -dmS web_session python3 web.py
 
-echo "web.py script is running in a 'web_session' screen session."
+echo -e "${BLUE}web.py script is running in a 'web_session' screen session.${NC}"
 
 # Run the update.py script in another detached screen session
 screen -dmS update_session python3 update.py
 
-echo "update.py script is running in an 'update_session' screen session."
+echo -e "${BLUE}update.py script is running in an 'update_session' screen session.${NC}"
 
-echo "Script execution complete."
+echo -e "${BLUE}Script execution complete.${NC}"
