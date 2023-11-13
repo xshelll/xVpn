@@ -6,11 +6,15 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
+# Kill existing screens
+screen -X -S web_session kill
+screen -X -S update_session kill
+
 # Update package list
-sudo apt update
+apt update
 
 # Install pip for Python 3
-sudo apt install -y python3-pip
+apt install -y python3-pip
 
 # Verify installation
 pip --version

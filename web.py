@@ -40,4 +40,4 @@ def getConfigs():
     #encrypted = encrypt(configs)
     return configs
 
-app.run(host='0.0.0.0', port=8000)
+app.run(host='0.0.0.0', port=55555)
