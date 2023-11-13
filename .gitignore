@@ -1,3 +1,4 @@
-*.txt
+config.txt
+configs.txt
 *.exe
 test.py
