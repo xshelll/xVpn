@@ -2,12 +2,16 @@ import requests
 import subprocess
 import schedule
 from time import sleep
+import base64
 
 
 def getConfigs():
-    servers = requests.get('https://raw.githubusercontent.com/yebekhe/ConfigCollector/main/sub/vless')
+    servers = requests.get('https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/subscribe/protocols/reality')
     if servers.status_code != 200:return False
-    servers = servers.text
+    try:
+        servers = base64.b64decode(servers.text).decode('utf-8')
+    except:
+        servers = servers.text
     with open('config.txt', 'w', encoding='UTF-8') as file: file.write(servers)
     return True
     
