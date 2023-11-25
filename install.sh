@@ -39,8 +39,8 @@ git clone https://github.com/xshelll/xVpn.git
 cd xVpn
 
 # Install dependencies from requirements.txt
-pip install -r requirements.txt --break-system-packages
-pip install -r requirements.txt
+# pip3 install -r requirements.txt --break-system-packages
+pip3 install -r requirements.txt
 
 # Change permissions
 chmod +x xray-knife
