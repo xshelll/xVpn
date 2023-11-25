@@ -40,6 +40,7 @@ cd xVpn
 
 # Install dependencies from requirements.txt
 pip install -r requirements.txt --break-system-packages
+pip install -r requirements.txt
 
 # Change permissions
 chmod +x xray-knife
